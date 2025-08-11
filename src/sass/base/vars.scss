@@ -1,11 +1,14 @@
 @use "../libs/pxtorem.scss" as *;
 
 // Font
-$fontFamily: "";
+$fontFamilySans: "DM Sans", sans-serif;
+$fontFamilyMono: "DM Mono", monospace;
 $fontSize: rem(16);
 
 // Colors
-$mainColor: #000;
+$colorMainGreen: #99E39E;
+$colorBackground: #000510;
+$colorWhite: #f2f2f2;
 
 // Breakpoints
 $laptopL: rem(1439.98);
