@@ -1,0 +1,17 @@
+@use "../base/vars.scss" as *;
+@use "../libs/pxtorem.scss" as *;
+@use "../base/mixins.scss" as *;
+
+.paragraph {
+    @include typography;
+}
+
+.title-hero {
+    @include typography($maxFZ: 72, $minFZ: 54, $vw: 8vw, $space: -0.01em, $line: 1.2);
+}
+.title-heading {
+    @include typography($maxFZ: 40, $minFZ: 30, $vw: 6vw, $space: -0.02em, $line: 1.2);
+    &--center {
+        text-align: center;
+    }
+}

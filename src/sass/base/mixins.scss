@@ -13,11 +13,11 @@
 	cursor: pointer;
 	border: none;
 	outline: none;
-    display: inline-flex;
-    align-self: start;
+	display: inline-flex;
+	align-self: start;
 	text-align: center;
 	transition: 0.4s all;
-    &:active {
+	&:active {
 		transform: scale(0.84);
 		background-color: $colorMainGreenFocus;
 	}
@@ -25,18 +25,36 @@
 		background-color: $colorWhite;
 		color: $colorButtonDisableText;
 	}
-    span {
-        transition: .4s transform;
-    }
+	span {
+		transition: 0.4s transform;
+	}
 	@media screen and (min-width: $tablet) {
 		&:hover {
-            background-color: $colorMainGreenHover;
-            span {
-                transform: translateX(rem(4));
-            }
+			background-color: $colorMainGreenHover;
+			span {
+				transform: translateX(rem(4));
+			}
 		}
 		&:focus {
-            background-color: $colorMainGreenFocus;
+			background-color: $colorMainGreenFocus;
 		}
 	}
+}
+
+@mixin typography(
+	$ff: $fontFamilySans,
+	$line: 1.4,
+	$maxFZ: 16,
+	$minFZ: 14,
+	$weight: 500,
+	$vw: 4vw,
+	$color: $colorWhite,
+	$space: normal
+) {
+	font-family: $ff;
+	font-weight: $weight;
+	font-size: clamp(rem($minFZ), calc(1rem + $vw), rem($maxFZ));
+	line-height: $line;
+	color: $color;
+	letter-spacing: $space;
 }
