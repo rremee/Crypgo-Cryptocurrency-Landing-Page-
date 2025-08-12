@@ -1,2 +1,19 @@
 @use "../base/vars.scss" as *;
 @use "../libs/pxtorem.scss" as *;
+@use "../base/mixins.scss" as *;
+
+.btn-default {
+	@include button;
+}
+.btn-arrow {
+	display: flex;
+	align-items: center;
+	column-gap: rem(11);
+	span {
+		font-size: rem(20);
+	}
+	@include button;
+	& {
+		padding: rem(13) rem(24);
+	}
+}

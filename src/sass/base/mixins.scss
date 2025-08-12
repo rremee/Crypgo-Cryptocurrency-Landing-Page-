@@ -1,0 +1,42 @@
+@use "../libs/pxtorem.scss" as *;
+@use "../base/vars.scss" as *;
+
+@mixin button() {
+	border-radius: rem(12);
+	padding: rem(11) rem(20);
+	background: $colorMainGreen;
+	font-family: $fontFamilySans;
+	font-weight: 600;
+	line-height: 1.375;
+	letter-spacing: -0.04em;
+	color: $colorBackground;
+	cursor: pointer;
+	border: none;
+	outline: none;
+    display: inline-flex;
+    align-self: start;
+	text-align: center;
+	transition: 0.4s all;
+    &:active {
+		transform: scale(0.84);
+		background-color: $colorMainGreenFocus;
+	}
+	&:disabled {
+		background-color: $colorWhite;
+		color: $colorButtonDisableText;
+	}
+    span {
+        transition: .4s transform;
+    }
+	@media screen and (min-width: $tablet) {
+		&:hover {
+            background-color: $colorMainGreenHover;
+            span {
+                transform: translateX(rem(4));
+            }
+		}
+		&:focus {
+            background-color: $colorMainGreenFocus;
+		}
+	}
+}
